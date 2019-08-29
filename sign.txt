@@ -1,0 +1,10 @@
+keytool -genkey -v -keystore baza.keystore -alias crypto -keyalg RSA -keysize 2048 -validity 10000
+
+P: Vvh194!)
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore baza.keystore android-release-unsigned.apk crypto
+
+
+
+
+/Users/voolasoftwaresolutions/Library/Android/sdk/build-tools/29.0.2/zipalign -v 4 android-release-unsigned.apk Baza.apk

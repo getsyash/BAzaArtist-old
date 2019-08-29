@@ -1,0 +1,48 @@
+<!-- -->
+<ion-header>
+  <ion-navbar color="primary" class="navbar" style="text-align: center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="../../assets/img/ionic3-ico.png" style="width: 30%;position: relative;right: 10%;">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <div>
+      <p>Thank you for reaching us ! </p>
+      <p>Please provide your information below </p>
+    </div>
+  </ion-list>
+
+  <form (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label>Slot ID</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.slotID" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Category</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.category" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Subject</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.subject" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Querry/Issue</ion-label>
+        <ion-textarea [(ngModel)]="todo.issue" name="description"></ion-textarea>
+      </ion-item>
+      <button ion-button type="submit" block>Submit</button>
+    </form>
+
+    <ion-list>
+      <div>
+        <h2 style="text-align: center">Contact Us </h2>
+        <p>info@baza.com</p>
+        <p>040-123456789(Mon - Fri 11am - 9pm)</p>
+      </div>
+    </ion-list>
+
+</ion-content>

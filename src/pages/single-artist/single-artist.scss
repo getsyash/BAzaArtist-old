@@ -1,0 +1,54 @@
+page-single-artist {
+    
+    .toolbar-background {
+        background-image: url(../../assets/img/Category_bg.png) !important;
+        background-size: cover !important;
+    }.navbar {
+        padding: 4px;
+        min-height: 35vh;
+    }.fixed-content, .scroll-content {
+        margin-top: 35vh !important;
+    }ion-list h3 {
+        text-align: center;
+        display: inline-block;
+        margin: 0px auto;
+        border-bottom: 1px solid;
+        padding-bottom: 5px;
+    }ion-list.HighlightItems {
+        background: #929292;
+        padding: 5%;
+        color: #fff;
+    }button.BookingButton {
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #fff;
+        background: #db9a00;
+    }ion-buttons{
+        text-align:center
+    }.ArtistDetails{
+        color: #fff;
+        right: 44px;
+        position: relative;
+    }ion-col.ArtistName span {
+        float: right;
+    }ion-col.ArtistTitle span {
+        float: left;
+    }ion-col.ArtistName {
+        border-right: 1px solid #fff;
+        margin-right: 5px;
+        padding-right: 15px;
+        font-size: 16px;
+        line-height: 15px;
+    }.ArtistImage{
+        width: 100px;
+        position: relative;
+        right: 10%;
+        border-radius: 100% !important;
+        height: 100px;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 15px;
+    }
+
+}

@@ -1,0 +1,53 @@
+<!--
+  Generated template for the SingleArtistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary" class="navbar" style="text-align: center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img class="ArtistImage" src="{{data.img}}" style="position: relative;right: 10%;">
+    <ion-row class="ArtistDetails"> 
+      <ion-col class="ArtistName"><span [innerHTML]="data.Name"></span></ion-col>
+      <ion-col class="ArtistTitle"><span [innerHTML]="data.title"></span></ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-list>
+    <div style="text-align: center"><h3>About</h3></div>
+    <p [innerHTML]="data.description"></p>
+  </ion-list>
+  <ion-list class="HighlightItems">
+    <ion-row>
+      <ion-col>Attend only</ion-col>
+      <ion-col [innerHTML]="data.Attend"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Remuneration</ion-col>
+      <ion-col><span [innerHTML]="data.remuneration" ></span><span>INR</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Language</ion-col>
+      <ion-col [innerHTML]="data.languages"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Total Events</ion-col>
+      <ion-col [innerHTML]="data.totalevents"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Willing to come</ion-col>
+      <ion-col [innerHTML]="data.willingtocome"></ion-col>
+    </ion-row>
+  </ion-list>
+  <ion-buttons>
+    <button class="BookingButton">
+      Schedule booking
+    </button>
+  </ion-buttons>
+
+</ion-content>

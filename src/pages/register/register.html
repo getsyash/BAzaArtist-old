@@ -1,0 +1,50 @@
+<!-- -->
+<ion-content class="auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding text-center>
+      <div class="logo"></div>
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form">
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="username" name="username" placeholder="Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Email ID"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="tel" [(ngModel)]="phonenumber" name="phonenumber" placeholder="Phone Number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select [(ngModel)]="gender" name="gender">
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </form>
+
+    <div margin-top>
+      <button ion-button block color="dark" tappable (click)="register()">
+        SIGN UP
+      </button>
+    </div>
+
+    <!-- Other links -->
+    <div text-center margin-top>
+      <span ion-text color="primary" tappable (click)="login()">I have an account</span>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,51 @@
+[
+    {
+        "id":"1", 
+        "name":"Test",
+        "category": "Lead Singer - Telugu, Tamil",
+        "img":"assets/img/avatar.jpeg"
+        
+    },
+    {
+        "id":"2", 
+        "name":"Test2",
+        "category": "Lead Singer - Telugu, Tamil",
+        "img":"assets/img/avatar.jpeg"
+    },
+    {
+        "id":"3", 
+        "name":"Test3",
+        "category": "Lead Singer - Telugu, Tamil",
+        "img":"assets/img/avatar.jpeg"
+    },
+    {
+        "id":"4", 
+        "name":"Test4",
+        "category": "Lead Singer - Telugu, Tamil",
+        "img":"assets/img/user/avatar.jpeg"
+    },
+    {
+        "id":"5", 
+        "name":"Test5",
+        "category": "Lead Singer - Telugu, Tamil",
+        "img":"../assets/img/avatar.jpeg"
+    },
+    {
+        "id":"6", 
+        "name":"Test6",
+        "category": "Lead Singer - Telugu, Tamil",
+        "img":"assets/img/avatar.jpeg"
+    },
+    {
+        "id":"7", 
+        "name":"Test",
+        "category": "Lead Singer - Telugu, Tamil",
+        "img":"assets/img/avatar.jpeg"
+    },
+    {
+        "id":"8", 
+        "name":"Test8",
+        "category": "Lead Singer - Telugu, Tamil",
+        "img":"assets/img/avatar.jpeg"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1", 
+        "name":"anchoring",
+        "img":"assets/img/categories/anchoring.jpg"
+    },
+    {
+        "id":"2", 
+        "name":"comedians",
+        "img":"assets/img/categories/comadians.jpg"
+    },
+    {
+        "id":"3", 
+        "name":"Dancers",
+        "img":"assets/img/categories/Dancers.jpg"
+    },
+    {
+        "id":"4", 
+        "name":"Singers",
+        "img":"assets/img/categories/Singers.jpg"
+    }
+]

@@ -1,0 +1,18 @@
+<!-- -->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="../../assets/img/ionic3-ico.png" style="width: 30%;position: relative;right: 10%;">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="animated fadeIn common-bg">
+  <ion-list>
+      <div class="ArtistList"  *ngFor ="let user of users" id="user-{{user.id}}">
+        <ion-avatar><img src="{{user.img}}"></ion-avatar>
+        <ion-label><h1 innerHTML="{{user.name}}"></h1><p innerHTML="{{user.category}}"></p></ion-label>
+      </div>
+    </ion-list>
+</ion-content>

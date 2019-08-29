@@ -1,0 +1,36 @@
+<!-- -->
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form" style="padding-top: 30px;padding-bottom: 20px;">
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="email" name="email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Password"></ion-input>
+      </ion-item>
+    </form>
+    <div>
+      <button ion-button icon-start block color="dark" tappable (click)="login()" class="LoginButton">
+        <ion-icon name="log-in"></ion-icon>
+        Login
+      </button>
+      <div id="recaptcha-container"></div>
+
+
+    </div>
+
+
+    <!-- Other links -->
+    <div text-center margin-top>
+      <span ion-text color="secondary" tappable (click)="register()">New here? <strong>Sign up</strong></span>
+    </div>
+
+  </div>
+</ion-content>

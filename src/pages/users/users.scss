@@ -1,0 +1,19 @@
+page-users {
+    ion-avatar {
+        width: 25%;
+        display: inline-block;
+    }.ArtistList ion-label {
+        width: 70%;
+        display: inline-block;
+        padding-left: 5%;
+    }.ArtistList {
+        background: #efefef;
+        margin-bottom: 10px;
+        padding: 10px;
+    }.toolbar-background {
+        background-image: url(../../assets/img/artist-profiel-bg.jpg) !important;
+        background-size: contain !important;
+    }.toolbar-content.toolbar-content-md {
+        text-align: center;
+    }
+}
