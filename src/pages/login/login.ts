@@ -1,11 +1,11 @@
+import { HomePage } from './../home/home';
+import { ProfilePage } from './../profile/profile';
 import { UserService } from './../../app/userService';
-import { CategoriesPage } from './../categories/categories';
 import {Component} from "@angular/core";
 import {NavController, AlertController, ToastController, MenuController} from "ionic-angular";
 import {RegisterPage} from "../register/register";
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase';
-import { NotificationsPage } from '../notifications/notifications';
 
 @Component({
   selector: 'page-login',
@@ -46,9 +46,12 @@ export class LoginPage {
   }
 
   async login(){
-    firebase.auth().signInWithEmailAndPassword(this.email,this.password).then((user)=>{
-      console.log(user);
-      this.nav.setRoot(CategoriesPage);
+    firebase.auth().signInWithEmailAndPassword(this.email,this.password).then((res)=>{
+
+        this.user.setUser({
+          uid: res.user.uid
+        })        
+        this.nav.setRoot(HomePage)
     }).catch((err)=>{
       console.log(err)
     })

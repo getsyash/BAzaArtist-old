@@ -1,3 +1,9 @@
+import { HelpPageModule } from './../pages/help/help.module';
+import { AboutusPageModule } from './../pages/aboutus/aboutus.module';
+import { BusinessprofilePageModule } from './../pages/businessprofile/businessprofile.module';
+import { HomePageModule } from './../pages/home/home.module';
+import { ProfilePageModule } from './../pages/profile/profile.module';
+
 import { UserService } from './userService';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,18 +20,14 @@ import firebaseConfig from './firebase'
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
-import {ActivityService} from "../services/activity-service";
-import {TripService} from "../services/trip-service";
-import {WeatherProvider} from "../services/weather";
-
 import {MyApp} from "./app.component";
 
 import {LoginPage} from "../pages/login/login";
-import {NotificationsPage} from "../pages/notifications/notifications";
 import {RegisterPage} from "../pages/register/register";
+import { EventsPageModule } from '../pages/events/events.module';
+import { TermsPageModule } from '../pages/terms/terms.module';
+import { ReferPageModule } from '../pages/refer/refer.module';
 
 // import services
 // end import services
@@ -38,7 +40,6 @@ import {RegisterPage} from "../pages/register/register";
   declarations: [
     MyApp,
     LoginPage,
-    NotificationsPage,
     RegisterPage,
   ],
   imports: [
@@ -48,7 +49,14 @@ import {RegisterPage} from "../pages/register/register";
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireDatabaseModule,
+    ProfilePageModule,
+    HomePageModule,
+    BusinessprofilePageModule,
+    AboutusPageModule,
+    HelpPageModule,
+    TermsPageModule,
+    ReferPageModule,
+    EventsPageModule,
     IonicModule.forRoot(MyApp, {
       scrollPadding: false,
       scrollAssist: true,
@@ -57,22 +65,18 @@ import {RegisterPage} from "../pages/register/register";
     IonicStorageModule.forRoot({
       name: 'Baza',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
-    NotificationsPage,
     RegisterPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Keyboard,
-    ActivityService,
-    TripService,
-    WeatherProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     UserService,
   ]

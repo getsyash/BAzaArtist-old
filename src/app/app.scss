@@ -3,7 +3,11 @@
 // --------------------------------------------------
 
 // global styles
-.ArtistInfo {
+.background {
+  background: #efefef;
+}button.bar-button-menutoggle {
+  position: absolute;
+}.ArtistInfo {
   background: #7e7e7e;
   padding: 3%;
   color: #fff;
@@ -39,6 +43,8 @@
 }.toolbar-background {
   background-size: cover !important;
   background-image: url('../../assets/img/Category_bg.png') !important;
+}ion-toolbar.toolbar {
+  height: 20vh;
 }.navbar {
     padding: 4px;
     min-height: 20vh;

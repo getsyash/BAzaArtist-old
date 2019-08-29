@@ -1,0 +1,27 @@
+page-profile {
+    ion-item.item-input,.item-toggle {
+        background-color: transparent;
+    }p {
+        font-size: 16px ;
+        display: block;
+        width: 100% !important;
+        color: #000;
+        text-align: center;
+        margin: 0px;
+        margin-bottom: 0.5em;
+    }ion-buttons {
+        background: #dda112;
+        color: #fff;
+        padding: 1em;
+        border-radius: 0.75em;
+        text-align: center;
+    }ion-label {
+        color: #000 !important;
+        font-size: 15px !important;
+    }.item-inner {
+        border-bottom: none !important;
+        box-shadow: none !important;
+    }ion-input,ion-textarea {
+        border-bottom: 1px solid #000;
+    }
+}

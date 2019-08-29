@@ -1,5 +1,10 @@
+import { HelpPage } from './../pages/help/help';
+import { TermsPage } from './../pages/terms/terms';
+import { AboutusPage } from './../pages/aboutus/aboutus';
+import { BusinessprofilePage } from './../pages/businessprofile/businessprofile';
+import { HomePage } from './../pages/home/home';
+
 import { UserService } from './userService';
-import { UserProfilePage } from './../pages/user-profile/user-profile';
 import { Component, ViewChild } from "@angular/core";
 import { Platform, Nav, ModalController } from "ionic-angular";
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -9,13 +14,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Keyboard } from '@ionic-native/keyboard';
 
 import { LoginPage } from "../pages/login/login";
-import { CategoriesPage } from "../pages/categories/categories";
-import { SplashPage } from "../pages/splash/splash"
-import { NotificationsPage } from "../pages/notifications/notifications";
+import { ProfilePage } from '../pages/profile/profile';
+import { EventsPage } from '../pages/events/events';
 import { ReferPage } from '../pages/refer/refer';
-import { FeedbackPage } from './../pages/feedback/feedback';
-import { BookingsPage } from './../pages/bookings/bookings';
-import { HelpdeskPage } from './../pages/helpdesk/helpdesk';
 
 
 export interface MenuItem {
@@ -29,6 +30,7 @@ export interface MenuItem {
 })
 
 export class MyApp {
+
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = LoginPage;
@@ -46,22 +48,22 @@ export class MyApp {
 
     this.initializeApp();
 
-    this.appMenuItems = [
-      {title: 'Home', component: CategoriesPage, icon: ''},
-      {title:'My Profile', component: UserProfilePage, icon: ''},
-      {title: 'My Booking', component: BookingsPage, icon: ''},
-      {title: 'Notifications', component: NotificationsPage, icon: ''},
-      {title: 'Refer a Friend', component: ReferPage, icon: ''},
-      {title: 'Help Desk', component: HelpdeskPage, icon: ''},
-      {title: 'Feed Back', component: FeedbackPage, icon: ''},      
+    this.appMenuItems = [  
+      {title: 'Home', component: HomePage, icon: ''},
+      {title: 'Upcoming Events', component: EventsPage, icon: ''},
+      {title: 'Business Profile', component: BusinessprofilePage, icon: ''},
+      {title: 'Personal Profile', component: ProfilePage, icon: ''},
+      {title: 'Personal Profile', component: ProfilePage, icon: ''},
+      {title: 'About Us', component: AboutusPage, icon: ''},
+      {title: 'Terms & Conditions', component: TermsPage, icon: ''},
+      {title: 'Help', component: HelpPage, icon: ''},
+      {title: 'Referyour friend', component: ReferPage, icon: ''}
     ];
 
     platform.ready().then(() => {
 
       statusBar.styleDefault();
 
-      let splash = modalCtrl.create(SplashPage);
-      splash.present();
 
   });
 
@@ -100,7 +102,6 @@ export class MyApp {
   }
 
   openProfile(){
-    this.nav.setRoot(UserProfilePage);
   }
 
 }

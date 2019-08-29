@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-navbar color="primary" class="navbar" style="text-align: center">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <img [src]='images.logo' style="width: 40%">
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <h1>Solo/Team Name</h1>
+    <p [innerHTML]="UserData.teamname"></p>
+  </ion-row>
+<ion-row>
+  <ion-row class="RadioCntainer">
+    <ion-list-header>
+      <ion-label>Willing to attend</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Weddings</ion-label>
+      <ion-radio slot="end" color="" value="Weddings"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Receptions</ion-label>
+      <ion-radio slot="end" color="" value="Receptions"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Engagements</ion-label>
+      <ion-radio slot="end" color="" value="Engagements"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Festivals</ion-label>
+      <ion-radio slot="end" color="" value="Festivals"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Birthdays</ion-label>
+      <ion-radio slot="end" color="" value="Birthdays"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sangeeth</ion-label>
+      <ion-radio slot="end" color="" value="Sangeeth"></ion-radio>
+    </ion-item>
+    <ion-item>
+        <ion-label>Anniversary</ion-label>
+        <ion-radio slot="end" color="" value="Anniversary"></ion-radio>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+      <ion-item>
+          <ion-label>Remuneration</ion-label>
+          <ion-input type="number" value="{{UserData.email}}" [(ngModel)]="UpdatedUserData.remuneration"></ion-input>
+      </ion-item>    
+      <ion-item>
+          <ion-label>Established in</ion-label>
+          <ion-datetime displayFormat="YYYY"></ion-datetime>
+      </ion-item>    
+  </ion-row>
+  <ion-row class="languages">
+          <ion-list-header>
+              <ion-label>Languages</ion-label>
+          </ion-list-header>
+          <ion-list>
+              <ion-label>Telugu</ion-label>
+              <ion-radio slot="end" color="" value="Telugu"></ion-radio>
+          </ion-list>
+          <ion-list>
+              <ion-label>Hindi</ion-label>
+              <ion-radio slot="end" color="" value="Hindi"></ion-radio>
+          </ion-list>
+          <ion-list>
+              <ion-label>Other</ion-label>
+              <ion-input type="text" ></ion-input>
+          </ion-list>
+  </ion-row>
+</ion-row>
+<button class="update" (click)="updateDetails()" > Save Details</button>
+</ion-content>

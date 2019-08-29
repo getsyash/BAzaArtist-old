@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.baza.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Baza</name>
-    <description>Baza</description>
+    <name>Baza Artist</name>
+    <description>Baza Artist </description>
     <author email="yashbandikatla@gmail.com" href="#">Ionic Theme</author>
     <content src="index.html" />
     <access origin="*" />

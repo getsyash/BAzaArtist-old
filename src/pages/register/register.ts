@@ -1,8 +1,8 @@
+import { ProfilePage } from './../profile/profile';
 import { UserService } from './../../app/userService';
 
 import {NavController,AlertController} from "ionic-angular";
 import {LoginPage} from "../login/login";
-import { CategoriesPage } from "../categories/categories";
 import {auth} from 'firebase/app';
 import firebase from 'firebase';
 import { Component, OnInit } from '@angular/core';
@@ -48,15 +48,14 @@ export class RegisterPage {
 
     try{
       const res = await this.afAuth.auth.createUserWithEmailAndPassword(email , password)
-      this.afstore.doc(`users/${res.user.uid}`).set({
-				username
-      })
-      this.user.setUser({
-				username,
-				uid: res.user.uid
-      })      
-      this.nav.setRoot(CategoriesPage);
-      
+      this.afstore.doc(`Artists/${res.user.uid}`).set({
+				username,password,email
+      }).then(()=> {
+          this.user.setUser({
+            uid: res.user.uid
+          })        
+          this.nav.setRoot(ProfilePage)
+        })  
     }catch(err){
 			console.dir(err)
     }
