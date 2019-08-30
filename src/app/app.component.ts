@@ -33,7 +33,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = LoginPage
 
   appMenuItems: Array<MenuItem>;
   constructor(
@@ -53,7 +53,6 @@ export class MyApp {
       {title: 'Upcoming Events', component: EventsPage, icon: ''},
       {title: 'Business Profile', component: BusinessprofilePage, icon: ''},
       {title: 'Personal Profile', component: ProfilePage, icon: ''},
-      {title: 'Personal Profile', component: ProfilePage, icon: ''},
       {title: 'About Us', component: AboutusPage, icon: ''},
       {title: 'Terms & Conditions', component: TermsPage, icon: ''},
       {title: 'Help', component: HelpPage, icon: ''},
@@ -61,12 +60,8 @@ export class MyApp {
     ];
 
     platform.ready().then(() => {
-
       statusBar.styleDefault();
-
-
   });
-
 
   }
 

@@ -28,7 +28,7 @@ export class UserService {
 	}
 
 	getUID(): string {
-		return this.user.uid
+		return this.afAuth.auth.currentUser.uid
 	}
 	ArtistData(){
 		return	this.afs.doc(`Artists/${this.getUID()}`).valueChanges()

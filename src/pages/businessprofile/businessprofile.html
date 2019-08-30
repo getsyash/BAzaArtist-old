@@ -8,71 +8,55 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-row>
-    <h1>Solo/Team Name</h1>
-    <p [innerHTML]="UserData.teamname"></p>
-  </ion-row>
-<ion-row>
-  <ion-row class="RadioCntainer">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>Solo/Team Name</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-input [(ngModel)]="UserData.teamname"></ion-input>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    <ion-row class="GreyBackground">
+      <ion-list-header>
+        <ion-label>About Performance:</ion-label>
+      </ion-list-header>
+      <ion-list class="AboutPerformance">
+          <ion-textarea [(ngModel)]="UserData.description"></ion-textarea>  
+      </ion-list>
+    </ion-row>
+
+  <ion-row class="GreyBackground">
     <ion-list-header>
-      <ion-label>Willing to attend</ion-label>
+      <ion-label>Willing to Attend:</ion-label>
     </ion-list-header>
-    <ion-item>
-      <ion-label>Weddings</ion-label>
-      <ion-radio slot="end" color="" value="Weddings"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Receptions</ion-label>
-      <ion-radio slot="end" color="" value="Receptions"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Engagements</ion-label>
-      <ion-radio slot="end" color="" value="Engagements"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Festivals</ion-label>
-      <ion-radio slot="end" color="" value="Festivals"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Birthdays</ion-label>
-      <ion-radio slot="end" color="" value="Birthdays"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Sangeeth</ion-label>
-      <ion-radio slot="end" color="" value="Sangeeth"></ion-radio>
-    </ion-item>
-    <ion-item>
-        <ion-label>Anniversary</ion-label>
-        <ion-radio slot="end" color="" value="Anniversary"></ion-radio>
-    </ion-item>
+    <ion-list *ngFor="let item of willingtoattend" class="willingtoattend">
+        <ion-label>{{item.title}}</ion-label>
+        <ion-checkbox (ionChange)="addCheckbox($event,item.value)" slot="end" [(ngModel)]="item.value"></ion-checkbox>  
+    </ion-list>
   </ion-row>
-  <ion-row>
-      <ion-item>
-          <ion-label>Remuneration</ion-label>
-          <ion-input type="number" value="{{UserData.email}}" [(ngModel)]="UpdatedUserData.remuneration"></ion-input>
-      </ion-item>    
-      <ion-item>
-          <ion-label>Established in</ion-label>
-          <ion-datetime displayFormat="YYYY"></ion-datetime>
-      </ion-item>    
+
+  <ion-row class="GreyBackground PreferedLocation">
+      <ion-list-header>
+        <ion-label>Willing to Come:</ion-label>
+      </ion-list-header>
+      <ion-list *ngFor="let i of willingtocome" class="willingtocome">
+          <ion-label>{{i.title}}</ion-label>
+          <ion-checkbox (ionChange)="addCheckbox($event,i.value)" slot="end" [(ngModel)]="i.value"></ion-checkbox>
+          <ion-select *ngIf="i.prefered" multiple="true" cancelText="Cancel" okText="Done!">
+              <ion-option *ngFor="let location of i.prefered" value="{{location.title}}">{{location.title}}</ion-option>
+          </ion-select>  
+      </ion-list>
   </ion-row>
-  <ion-row class="languages">
-          <ion-list-header>
-              <ion-label>Languages</ion-label>
-          </ion-list-header>
-          <ion-list>
-              <ion-label>Telugu</ion-label>
-              <ion-radio slot="end" color="" value="Telugu"></ion-radio>
-          </ion-list>
-          <ion-list>
-              <ion-label>Hindi</ion-label>
-              <ion-radio slot="end" color="" value="Hindi"></ion-radio>
-          </ion-list>
-          <ion-list>
-              <ion-label>Other</ion-label>
-              <ion-input type="text" ></ion-input>
-          </ion-list>
+
+  <ion-row class="terms">
+    <ion-checkbox slot="end"></ion-checkbox>
+    <ion-label ((click)="openTerms()" >I Agree to the terms and conditions</ion-label>
   </ion-row>
-</ion-row>
+
+  
+
 <button class="update" (click)="updateDetails()" > Save Details</button>
 </ion-content>

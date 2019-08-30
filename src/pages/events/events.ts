@@ -1,7 +1,8 @@
+import { AngularFirestore } from '@angular/fire/firestore';
+import { UserService } from './../../app/userService';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import images from '../../app/images';
-
 /**
  * Generated class for the EventsPage page.
  *
@@ -16,10 +17,18 @@ import images from '../../app/images';
 })
 export class EventsPage {
 
-
   images = images
+  UserData:any = {}
+  UpdatedUserData: any = {}
+  Events :any 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor( public afs : AngularFirestore,
+    public user: UserService, public navCtrl: NavController, public navParams: NavParams) {
+    console.log(this.user.getUID())
+    this.afs.doc(`Artists/${this.user.getUID()}`).collection('bookings').valueChanges().subscribe(res =>{
+      this.Events = res
+      console.log(this.Events)
+    })
   }
 
   ionViewDidLoad() {

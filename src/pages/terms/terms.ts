@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import images from '../../app/images';
 
 /**
  * Generated class for the TermsPage page.
@@ -14,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'terms.html',
 })
 export class TermsPage {
+  images = images
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

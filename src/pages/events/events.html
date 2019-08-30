@@ -6,8 +6,27 @@
       <img [src]='images.logo' style="width: 40%">
     </ion-navbar>
 </ion-header>
-
-
 <ion-content padding>
-
+  <ion-list-header>
+    My Bookings
+  </ion-list-header>
+      <ion-card  *ngFor="let event of Events" class="bookings">
+          <ion-card-header>
+            <ion-card-title>{{event.event}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-col>Start Date</ion-col>
+              <ion-col>{{event.startdate}}</ion-col>
+            </ion-list>
+            <ion-list>
+              <ion-col>End Date</ion-col>
+              <ion-col>{{event.startdate}}</ion-col>
+            </ion-list>
+            <ion-list>
+              <ion-col>Location</ion-col>
+              <ion-col>{{event.location}}</ion-col>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
 </ion-content>

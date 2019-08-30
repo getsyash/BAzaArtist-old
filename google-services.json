@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "794187579108",
+    "firebase_url": "https://baza-7a5d5.firebaseio.com",
+    "project_id": "baza-7a5d5",
+    "storage_bucket": "baza-7a5d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794187579108:android:3b6e8556ebb8f3ad",
+        "android_client_info": {
+          "package_name": "com.baza.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794187579108-tgopjulfmovio403a4b0i15jlhhee7a2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.baza.app",
+            "certificate_hash": "e6db721347e7b4dc79608f0e046855049262aa4a"
+          }
+        },
+        {
+          "client_id": "794187579108-kv6309fjj3fm21fbtsnqqh1egkjdt5on.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwmd2YykNqDR_6xUc2a25Y1P_imy6jUZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794187579108-kv6309fjj3fm21fbtsnqqh1egkjdt5on.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

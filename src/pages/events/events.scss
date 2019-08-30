@@ -1,3 +1,19 @@
 page-events {
-
+    ion-card.bookings.card.card-md {
+        background: #efefef;
+        color: #000 !important;
+    }ion-card-header {
+        padding-bottom: 5px !important;
+    }ion-card-content {
+        font-size: 15px !important;
+    }ion-list-header {
+        border: 0px !important;
+        font-size: 28px !important;
+        color: #ca8b02 !important;
+        font-weight: 900 !important;
+        text-align: center !important;
+        padding: 0px !important;
+        border-bottom: 1px solid !important;
+        margin-bottom: 1em !important;
+    }
 }
