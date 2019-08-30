@@ -1,3 +1,4 @@
+import { CalenderPage } from './../calender/calender';
 import { BusinessprofilePage } from './../businessprofile/businessprofile';
 import { ProfilePage } from './../profile/profile';
 import { Component } from '@angular/core';
@@ -21,11 +22,12 @@ import { EventsPage } from '../events/events';
 export class HomePage {
 
   images = images
-  UserData 
+  UserData:any ={}
   constructor(public user: UserService, public navCtrl: NavController, public navParams: NavParams) {
 
     this.user.ArtistData().subscribe( (res) => {
       this.UserData = res
+      console.log(this.UserData)
     })
 
   }
@@ -39,6 +41,8 @@ export class HomePage {
     this.navCtrl.setRoot(BusinessprofilePage)
   }OpenEventsPage(){
     this.navCtrl.setRoot(EventsPage)
+  }OpenCalenderPage(){
+    this.navCtrl.setRoot(CalenderPage)
   }
 
 }

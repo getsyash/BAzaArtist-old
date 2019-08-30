@@ -1,3 +1,4 @@
+import { CalenderPage } from './../pages/calender/calender';
 import { HelpPage } from './../pages/help/help';
 import { TermsPage } from './../pages/terms/terms';
 import { AboutusPage } from './../pages/aboutus/aboutus';
@@ -17,6 +18,8 @@ import { LoginPage } from "../pages/login/login";
 import { ProfilePage } from '../pages/profile/profile';
 import { EventsPage } from '../pages/events/events';
 import { ReferPage } from '../pages/refer/refer';
+import { RequestsPage } from '../pages/requests/requests';
+import { EarningsPage } from '../pages/earnings/earnings';
 
 
 export interface MenuItem {
@@ -33,7 +36,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage
+  rootPage: any 
 
   appMenuItems: Array<MenuItem>;
   constructor(
@@ -50,13 +53,14 @@ export class MyApp {
 
     this.appMenuItems = [  
       {title: 'Home', component: HomePage, icon: ''},
-      {title: 'Upcoming Events', component: EventsPage, icon: ''},
-      {title: 'Business Profile', component: BusinessprofilePage, icon: ''},
-      {title: 'Personal Profile', component: ProfilePage, icon: ''},
+      {title: 'My Calender', component: CalenderPage, icon: ''},
+      {title: 'My Requests', component: RequestsPage, icon: ''},
+      {title: 'My Bookings', component: EventsPage, icon: ''},
+      {title: 'My Earnings', component: EarningsPage, icon: ''},
       {title: 'About Us', component: AboutusPage, icon: ''},
       {title: 'Terms & Conditions', component: TermsPage, icon: ''},
       {title: 'Help', component: HelpPage, icon: ''},
-      {title: 'Referyour friend', component: ReferPage, icon: ''}
+      {title: 'Refer Your friend', component: ReferPage, icon: ''}
     ];
 
     platform.ready().then(() => {
@@ -65,10 +69,18 @@ export class MyApp {
 
   }
 
-
-
   initializeApp() {
     this.platform.ready().then(() => {
+
+      this.afAuth.authState.subscribe( user => {
+        if(user){
+          this.rootPage = HomePage
+        }else{
+          this.rootPage = LoginPage
+        }
+      },()=>{
+        this.rootPage = LoginPage
+      })
 
       // Okay, so the platform is ready and our plugins are available.
       //*** Control Splash Screen
@@ -82,6 +94,8 @@ export class MyApp {
       //*** Control Keyboard
       //this.keyboard.disableScroll(true);
     });
+
+
   }
 
   openPage(page) {
@@ -97,6 +111,7 @@ export class MyApp {
   }
 
   openProfile(){
+    this.nav.setRoot(ProfilePage)
   }
 
 }

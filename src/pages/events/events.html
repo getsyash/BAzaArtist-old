@@ -10,6 +10,10 @@
   <ion-list-header>
     My Bookings
   </ion-list-header>
+  <ion-row class="NavBar">
+    <ion-col><p>Previous</p></ion-col>
+    <ion-col><p>Upcoming</p></ion-col>
+  </ion-row>
       <ion-card  *ngFor="let event of Events" class="bookings">
           <ion-card-header>
             <ion-card-title>{{event.event}}</ion-card-title>

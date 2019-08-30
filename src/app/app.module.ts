@@ -1,3 +1,4 @@
+import { CalenderPageModule } from './../pages/calender/calender.module';
 import { HelpPageModule } from './../pages/help/help.module';
 import { AboutusPageModule } from './../pages/aboutus/aboutus.module';
 import { BusinessprofilePageModule } from './../pages/businessprofile/businessprofile.module';
@@ -28,6 +29,8 @@ import {RegisterPage} from "../pages/register/register";
 import { EventsPageModule } from '../pages/events/events.module';
 import { TermsPageModule } from '../pages/terms/terms.module';
 import { ReferPageModule } from '../pages/refer/refer.module';
+import { EarningsPageModule } from '../pages/earnings/earnings.module';
+import { RequestsPageModule } from '../pages/requests/requests.module';
 
 // import services
 // end import services
@@ -57,6 +60,9 @@ import { ReferPageModule } from '../pages/refer/refer.module';
     TermsPageModule,
     ReferPageModule,
     EventsPageModule,
+    EarningsPageModule,
+    RequestsPageModule,
+    CalenderPageModule,
     IonicModule.forRoot(MyApp, {
       scrollPadding: false,
       scrollAssist: true,

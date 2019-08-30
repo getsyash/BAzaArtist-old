@@ -11,10 +11,10 @@
 
 <ion-content padding>
   <ion-row >
-    <h2 style="margin: 0px auto;">Team Name</h2>
+    <h2 style="margin: 0px auto;" [innerHTML]="UserData.teamname">Team Name</h2>
   </ion-row>
   <ion-row class="ProfileContainer">
-    <ion-grid class="grid-1">
+    <ion-grid class="grid-1" (click)="OpenCalenderPage()">
       <img src="../../assets/img/date-sheduler.png">
       <p>Event Date's Scheduler</p>
     </ion-grid>
@@ -32,7 +32,7 @@
     </ion-grid>
   </ion-row>
   <ion-row >
-    <h2 style="margin: 0px auto;">Up Coming Events</h2>
+    <h2 style="margin: 0px auto;">Upcoming Events</h2>
     <ion-list></ion-list>
   </ion-row>
 
