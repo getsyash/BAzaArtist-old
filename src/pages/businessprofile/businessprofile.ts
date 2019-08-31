@@ -7,6 +7,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import images from '../../app/images';
 import { UserService } from '../../app/userService';
 import { TermsPage } from '../terms/terms';
+import { Bprofile2Page } from '../bprofile2/bprofile2';
 
 export interface willingtoattend {
   title: string;
@@ -85,13 +86,7 @@ export class BusinessprofilePage {
     }
     
    updateDetails(){
-         
-    var updateddata = {
-      'willingtoattend': this.checked,
-    }
-    this.afs.doc(`Artists/${this.user.getUID()}`).update(updateddata).then(()=>
-      this.navCtrl.setRoot(HomePage)
-    )
+         this.navCtrl.push(Bprofile2Page)
    }
 
    openTerms(){

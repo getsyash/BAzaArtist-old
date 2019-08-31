@@ -31,6 +31,8 @@ import { TermsPageModule } from '../pages/terms/terms.module';
 import { ReferPageModule } from '../pages/refer/refer.module';
 import { EarningsPageModule } from '../pages/earnings/earnings.module';
 import { RequestsPageModule } from '../pages/requests/requests.module';
+import { Bprofile2PageModule } from '../pages/bprofile2/bprofile2.module';
+import { Bprofile3PageModule } from '../pages/bprofile3/bprofile3.module';
 
 // import services
 // end import services
@@ -63,6 +65,8 @@ import { RequestsPageModule } from '../pages/requests/requests.module';
     EarningsPageModule,
     RequestsPageModule,
     CalenderPageModule,
+    Bprofile2PageModule,
+    Bprofile3PageModule,
     IonicModule.forRoot(MyApp, {
       scrollPadding: false,
       scrollAssist: true,
