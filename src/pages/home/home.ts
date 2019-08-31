@@ -6,6 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import images from '../../app/images';
 import { UserService } from './../../app/userService';
 import { EventsPage } from '../events/events';
+import { EarningsPage } from '../earnings/earnings';
 
 /**
  * Generated class for the HomePage page.
@@ -36,9 +37,9 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
   }
   openProfilePage(){
-    this.navCtrl.setRoot(ProfilePage)
-  }openBusinessProfile(){
     this.navCtrl.setRoot(BusinessprofilePage)
+  }openBusinessProfile(){
+    this.navCtrl.setRoot(EarningsPage)
   }OpenEventsPage(){
     this.navCtrl.setRoot(EventsPage)
   }OpenCalenderPage(){

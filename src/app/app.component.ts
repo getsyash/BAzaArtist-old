@@ -53,10 +53,10 @@ export class MyApp {
 
     this.appMenuItems = [  
       {title: 'Home', component: HomePage, icon: ''},
-      {title: 'My Calender', component: CalenderPage, icon: ''},
-      {title: 'My Requests', component: RequestsPage, icon: ''},
-      {title: 'My Bookings', component: EventsPage, icon: ''},
-      {title: 'My Earnings', component: EarningsPage, icon: ''},
+    //  {title: 'My Calender', component: CalenderPage, icon: ''},
+    //  {title: 'My Requests', component: RequestsPage, icon: ''},
+    //  {title: 'My Bookings', component: EventsPage, icon: ''},
+    //  {title: 'My Earnings', component: EarningsPage, icon: ''},
       {title: 'About Us', component: AboutusPage, icon: ''},
       {title: 'Terms & Conditions', component: TermsPage, icon: ''},
       {title: 'Help', component: HelpPage, icon: ''},
