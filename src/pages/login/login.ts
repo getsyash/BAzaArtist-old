@@ -54,6 +54,18 @@ export class LoginPage {
         this.nav.setRoot(HomePage)
     }).catch((err)=>{
       console.log(err)
+      if( err.code = "auth/wrong-password"){
+        let alert = this.alertCtrl.create({
+          title:'Invalid Username/Password',
+          message : 'Invalid username or password',
+          buttons : [{
+              text: 'Okay',
+              handler: data => { console.log('Cancel clicked'); }
+            }
+          ]
+        });
+        alert.present();
+      }
     })
   }
 

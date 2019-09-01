@@ -24,6 +24,7 @@ export class RegisterPage {
 
   public recaptchaVerifier:firebase.auth.RecaptchaVerifier;
   constructor(
+    public AlertController : AlertController,
 		public afAuth: AngularFireAuth,
 		public afstore: AngularFirestore,
 		public user: UserService,
@@ -44,22 +45,47 @@ export class RegisterPage {
 
 
   async register(){
-    const { username, password,email } = this
-
-    try{
-      const res = await this.afAuth.auth.createUserWithEmailAndPassword(email , password)
-      this.afstore.doc(`Artists/${res.user.uid}`).set({
-				username,password,email
-      }).then(()=> {
-          this.user.setUser({
-            uid: res.user.uid
-          })        
-          this.nav.setRoot(ProfilePage)
-        })  
-    }catch(err){
-			console.dir(err)
+    const { username, password,email, gender } = this
+    if(username && password && email && gender !== ""){
+      try{
+        const res = await this.afAuth.auth.createUserWithEmailAndPassword(email , password)
+        this.afstore.doc(`Artists/${res.user.uid}`).set({
+          username,password,email
+        }).then(()=> {
+            this.user.setUser({ 
+              uid: res.user.uid
+            })        
+            console.log("success",res.user)
+          })  
+      }catch(err){
+        console.dir(err)
+        if(err.code = "auth/email-already-in-use"){
+          console.log('Email Exists')
+          let alert = this.alertCtrl.create({
+            title:'Invalid Email',
+            message : 'The Email id is already in use please try logging in',
+            buttons : [{        
+              text: 'Login',
+              handler: data => {
+                this.nav.setRoot(LoginPage)
+              }
+            }]
+          });
+          alert.present();
+        }
+      }      
+    }else{
+      let alert = this.alertCtrl.create({
+        title:'Missing Details',
+        message : 'Please make sure to enter all the Details',
+        buttons : [{
+            text: 'Okay',
+            handler: data => { console.log('Cancel clicked'); }
+          }
+        ]
+      });
+      alert.present();
     }
-
   }
 
 
