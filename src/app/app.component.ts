@@ -20,6 +20,7 @@ import { EventsPage } from '../pages/events/events';
 import { ReferPage } from '../pages/refer/refer';
 import { RequestsPage } from '../pages/requests/requests';
 import { EarningsPage } from '../pages/earnings/earnings';
+import { Bprofile2Page } from '../pages/bprofile2/bprofile2';
 
 
 export interface MenuItem {

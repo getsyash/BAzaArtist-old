@@ -9,55 +9,57 @@
 
 <ion-content padding>
 
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-label>Solo/Team Name</ion-label>
-        </ion-col>
-        <ion-col>
-          <ion-input [(ngModel)]="UserData.teamname"></ion-input>  
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <ion-row class="GreyBackground">
-      <ion-list-header>
-        <ion-label>About Performance:</ion-label>
-      </ion-list-header>
-      <ion-list class="AboutPerformance">
-          <ion-textarea [(ngModel)]="UserData.description"></ion-textarea>  
-      </ion-list>
-    </ion-row>
-
-  <ion-row class="GreyBackground">
+  <ion-row class="GreyBackground contactDetails">
     <ion-list-header>
-      <ion-label>Willing to Attend:</ion-label>
+      <ion-label>Contact Details</ion-label>
     </ion-list-header>
-    <ion-list *ngFor="let item of willingtoattend" class="willingtoattend">
-        <ion-label>{{item.title}}</ion-label>
-        <ion-checkbox (ionChange)="addCheckbox($event,item.value)" slot="end" [(ngModel)]="item.value"></ion-checkbox>  
+    <ion-list class="firstName">
+      <ion-label  position="floating" >First Name</ion-label>
+      <ion-input type='text'></ion-input>  
+    </ion-list>
+    <ion-list class="lastName">
+      <ion-label  position="floating">Last Name</ion-label>
+      <ion-input type='text'></ion-input>  
+    </ion-list>
+    <ion-list class="address">
+      <ion-label  position="floating">Address</ion-label>
+      <ion-textarea></ion-textarea>  
     </ion-list>
   </ion-row>
 
-  <ion-row class="GreyBackground PreferedLocation">
-      <ion-list-header>
-        <ion-label>Willing to Come:</ion-label>
-      </ion-list-header>
-      <ion-list *ngFor="let i of willingtocome" class="willingtocome">
-          <ion-label>{{i.title}}</ion-label>
-          <ion-checkbox (ionChange)="addCheckbox($event,i.value)" slot="end" [(ngModel)]="i.value"></ion-checkbox>
-          <ion-select *ngIf="i.prefered" multiple="true" cancelText="Cancel" okText="Done!">
-              <ion-option *ngFor="let location of i.prefered" value="{{location.title}}">{{location.title}}</ion-option>
-          </ion-select>  
-      </ion-list>
+
+  <ion-row class="GreyBackground contactDetails">
+    <ion-list class="firstName">
+      <ion-label  position="floating" >Office Land Line Number</ion-label>
+      <ion-input type='tel'></ion-input>  
+    </ion-list>
+    <ion-list class="lastName">
+      <ion-label  position="floating">Alternate Contact Number</ion-label>
+      <ion-input type='tel'></ion-input>  
+    </ion-list>
+    <ion-list class="address">
+      <ion-label  position="floating">Email</ion-label>
+      <ion-input type='Email'></ion-input>  
+    </ion-list>
+  </ion-row>
+    
+
+  <ion-row class="GreyBackground IDprood">
+    <ion-list class="firstName">
+      <ion-label  position="floating" >AdharCard Number</ion-label>
+      <ion-input type='number' minlength="14" maxlength="14"></ion-input>  
+    </ion-list>
+    <ion-list>
+      <ion-label  position="floating" >ID Photo</ion-label>
+      <input type="file"  class="idButton" placeholder="Front Image">
+      <input type="file"  class="idButton" placeholder="Back Image">
+    </ion-list>
+  </ion-row>
+    
+  <ion-row class="terms">
+    <ion-checkbox slot="end"></ion-checkbox>
+    <ion-label ((click)="openTerms()" >I Agree to the terms and conditions</ion-label>
   </ion-row>
 
-
-<ion-row class="terms">
-  <ion-checkbox slot="end"></ion-checkbox>
-  <ion-label ((click)="openTerms()" >I Agree to the terms and conditions</ion-label>
-</ion-row>
-
-
-<button class="update" (click)="updateDetails()" > Save Details</button>
+<button class="update" (click)="updateDetails()" >next</button>
 </ion-content>

@@ -1,3 +1,83 @@
 page-bprofile2 {
-
+    .RadioCntainer ion-item {
+        width: 50%;
+    }.languages .text-input {
+        margin-top: 0px;
+        border-bottom: 1px solid;
+    }button.update {
+        padding: 1em;
+        width: 100%;
+        background: #db9a00;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 0.5em;
+    }.willingtoattend{        
+        padding-right: 10px;
+    }.willingtoattend ion-label.label.label-md {
+        display: inline-block;
+        margin: 0px auto;
+    }ion-list-header {
+        border: 0px !important;
+        padding: 0px !important;
+        color: #000 !important;
+        font-size: 16px !important;
+        background-color: transparent !important;
+    }.GreyBackground.row {
+            background: #efefef;
+            padding: 1.5em;
+            margin-bottom: 1em;
+    }.GreyBackground ion-label {
+        color: #000;
+    }.GreyBackground .checkbox-md {
+        position: relative;
+        float: left !important;
+        margin-right: 0.75em;
+    }.PreferedLocation .willingtocome {
+        display: block !important;
+        width: 100% !important;
+    }.PreferedLocation .willingtocome ion-label {
+        display: inline;
+    }.PreferedLocation .select-md {    
+        padding: 10px 15px 10px 25px;
+        position: relative;
+        width: 100% !important;
+        max-width: none;
+    }.GreyBackground ion-list-header ion-label {
+        color: #000;
+        padding-top: 0px !important;
+        margin-top: 0 !important;
+    }.willingtocome ion-select button {
+        border-bottom: 1px solid;
+    }.terms ion-label.label.label-md {
+        display: inline !important;
+        margin: 0px auto;
+    }ion-row.terms.row {
+        padding-left: 15px;
+        margin: 1em 0px !important;
+    }.terms ion-checkbox {
+        padding-right: 1em;
+    }ion-list.AboutPerformance {
+        width: 100% !important;
+        margin: 0px auto;
+    }.GreyBackground ion-list-header {
+        margin-bottom: 0px;
+    }.contactDetails ion-list {
+        width: 100% !important;
+        display: flex;
+    }.contactDetails ion-input,.contactDetails ion-textarea {
+        border-bottom: 1px solid #000 !important;
+    }.contactDetails ion-label {
+        flex: none;
+    }.IDprood ion-list {
+        display: block;
+        width: 100%;
+    }.IDprood ion-list input {
+        border-bottom: 1px solid #000;
+    }input.idButton {
+        width: 100% !important;
+        margin-bottom: 15px;
+        border-bottom: 0px !important;
+    }
+    
+    
 }

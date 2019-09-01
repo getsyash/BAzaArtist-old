@@ -39,7 +39,7 @@ export class BusinessprofilePage {
   willingtoattend: Array<willingtoattend>
   willingtocome: Array<willingtocome>
   checked = [];
-
+  category
 
   constructor(public user : UserService, public navCtrl: NavController, public navParams: NavParams, private afs : AngularFirestore) {
 
@@ -57,7 +57,10 @@ export class BusinessprofilePage {
       {title: 'All Over Andhra Pradesh', value : 'panandhra',isChecked:false},
       {title: 'Prefered Locations', Value :'prefered', isChecked:false, prefered :[{title:'Hyderabad'},{title:'Vijayawada'},{title:'Guntur'},{title:'Nellore'}]}
     ]
-
+    this.afs.collection('categories').valueChanges().subscribe(res =>{
+      this.category = res
+      console.log(res)
+    })
     this.afs.doc(`Artists/${this.user.getUID()}`).valueChanges().subscribe( res => {
       console.log(res)
       this.UserData = res
