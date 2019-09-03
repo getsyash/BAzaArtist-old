@@ -1,39 +1,39 @@
 <!--
 -->
 <ion-header>
-    <ion-navbar color="primary" class="navbar" style="text-align: center">
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <img [src]='images.logo' style="width: 40%">
-    </ion-navbar>
+  <ion-navbar color="primary" class="navbar" style="text-align: center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img [src]='images.logo' style="width: 40%">
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-row >
-    <h2 style="margin: 0px auto;" [innerHTML]="UserData.teamname">Team Name</h2>
-  </ion-row>
-  <ion-row class="ProfileContainer">
-    <ion-grid class="grid-1" (click)="OpenCalenderPage()">
-      <img src="../../assets/img/date-sheduler.png">
-      <p>Event Date's Scheduler</p>
-    </ion-grid>
-    <ion-grid class="grid-2" (click)="OpenEventsPage()" >
-      <img src="../../assets/img/events.png">
-      <p>Up Coming Events</p>
-    </ion-grid>
-    <ion-grid class="grid-3" (click)="openBusinessProfile()">
-      <img src="../../assets/img/Businessprofile.png">
-      <p>My Earnings</p>
-    </ion-grid>
-    <ion-grid class="grid-4" (click)="openProfilePage()" >
-      <img src="../../assets/img/PersonalProfile.png">
-      <p>My Personal Profile</p>
-    </ion-grid>
-  </ion-row>
-  <ion-row >
-    <h2 style="margin: 0px auto;">Upcoming Events</h2>
-    <ion-list></ion-list>
-  </ion-row>
+<ion-row >
+  <h2 style="margin: 0px auto;" [innerHTML]="UserData.teamname">Team Name</h2>
+</ion-row>
+<ion-row class="ProfileContainer">
+  <ion-grid class="grid-1" (click)="OpenCalenderPage()">
+    <img src="./assets/img/date-sheduler.png">
+    <p>Event Date's Scheduler</p>
+  </ion-grid>
+  <ion-grid class="grid-2" (click)="OpenEventsPage()" >
+    <img src="./assets/img/events.png">
+    <p>Up Coming Events</p>
+  </ion-grid>
+  <ion-grid class="grid-3" (click)="openBusinessProfile()">
+    <img src="./assets/img/Businessprofile.png">
+    <p>My Earnings</p>
+  </ion-grid>
+  <ion-grid class="grid-4" (click)="openProfilePage()" >
+    <img src="./assets/img/PersonalProfile.png">
+    <p>My Personal Profile</p>
+  </ion-grid>
+</ion-row>
+<ion-row >
+  <h2 style="margin: 0px auto;">Upcoming Events</h2>
+  <ion-list></ion-list>
+</ion-row>
 
 </ion-content>

@@ -111,21 +111,19 @@ export class MyApp {
               nav.pop();
           } else {
               const alert = this.alertCtrl.create({
-                  title: 'Fechar o App',
-                  message: 'Você tem certeza?',
+                  title: 'Sure you wanna quit?',
                   buttons: [{
-                      text: 'Cancelar',
-                      role: 'cancel',
-                      handler: () => {
-                        this.nav.setRoot('HomePage');
-                        console.log('** Saída do App Cancelada! **');
-                      }
+                    text: 'Yes',
+                    handler: () => {
+                      this.logout();
+                      this.platform.exitApp();
+                    }
                   },{
-                      text: 'Fechar o App',
-                      handler: () => {
-                        this.logout();
-                        this.platform.exitApp();
-                      }
+                    text: 'No',
+                    role: 'cancel',
+                    handler: () => {
+                      this.nav.setRoot('HomePage');
+                    }
                   }]
               });
               alert.present();

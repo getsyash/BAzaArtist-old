@@ -61,5 +61,11 @@ page-businessprofile {
         margin: 0px auto;
     }.GreyBackground ion-list-header {
         margin-bottom: 0px;
+    }input.text-input {
+        border-bottom: 1px solid #000;
+    }.select-placeholder.select-text {
+        color: #000;
+        position: relative;
+        left: -1em;
     }
 }

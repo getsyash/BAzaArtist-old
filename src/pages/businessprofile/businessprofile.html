@@ -22,32 +22,26 @@
     
   <ion-row class="GreyBackground PreferedLocation">
       <ion-list class="willingtocome">
-          <ion-label >Talent Category</ion-label>
-          <ion-select multiple="false" cancelText="Cancel" okText="Done!">
+          <ion-select multiple="false" cancelText="Cancel" okText="Done!" placeholder="Talent Category">
               <ion-option *ngFor="let i of category" value="{{i.name}}">{{i.name}}</ion-option>
           </ion-select>  
       </ion-list>
       
       <ion-list class="willingtocome">
-          <ion-label >Talent Type</ion-label>
-          <ion-select multiple="false" cancelText="Cancel" okText="Done!">
+          <ion-select multiple="false" cancelText="Cancel" okText="Done!" placeholder="Talent Type">
               <ion-option  value="TalentTypeSolo">Solo</ion-option>
               <ion-option  value="TalentTypeGroup">Group</ion-option>
           </ion-select>  
       </ion-list>
       
       <ion-list class="willingtocome">
-          <ion-label >Team Count</ion-label>
-          <ion-input type="number" ></ion-input>
+          <ion-input type="number" placeholder="Team Count" ></ion-input>
       </ion-list>
   </ion-row>
 
     <ion-row class="GreyBackground">
-      <ion-list-header>
-        <ion-label>About Performance:</ion-label>
-      </ion-list-header>
       <ion-list class="AboutPerformance">
-          <ion-textarea [(ngModel)]="UserData.description"></ion-textarea>  
+          <ion-textarea [(ngModel)]="UserData.description" placeholder="About Performance:"></ion-textarea>  
       </ion-list>
     </ion-row>
 

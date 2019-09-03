@@ -3,9 +3,7 @@
 // --------------------------------------------------
 
 // global styles
-button.back-button {
-  position: absolute;
-}.background {
+.background {
   background: #efefef;
 }button.bar-button-menutoggle {
   position: absolute;
@@ -44,7 +42,7 @@ button.back-button {
   background-position: center;
 }.toolbar-background {
   background-size: cover !important;
-  background-image: url('../../assets/img/Category_bg.png') !important;
+  background-image: url('../assets/img/Category_bg.png') !important;
 }ion-toolbar.toolbar {
   height: 20vh;
 }.navbar {

@@ -17,6 +17,10 @@
   <ion-row>
     <p style="line-height: 24px;"><span style="border-bottom: 1px solid #000; padding-bottom: 0.25em">My Profile</span></p>
     <ion-item>
+      <input type="file" class="filebtn" (click)="UploadProfilePic()" />
+      <img src="{{ProfilePic}}">
+    </ion-item>
+    <ion-item>
         <ion-label position="floating">Solo/Team Name:</ion-label>
         <ion-input type="text" value="{{UserData.teamname}}" [(ngModel)]="UpdatedUserData.teamname" ></ion-input>
     </ion-item>
