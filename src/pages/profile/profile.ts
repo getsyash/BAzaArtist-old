@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import images from '../../app/images';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 /**
  * Generated class for the ProfilePage page.
@@ -21,17 +22,18 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class ProfilePage {
 
   images = images
-  ProfilePic 
+	imageURL: string
   UserData:any = {}
   UpdatedUserData : any = {}
   
-  constructor(public navCtrl: NavController,
-     public user : UserService,
-     public navParams: NavParams,
-     private afs : AngularFirestore,
-     public afAuth : AngularFireAuth,
-     public alert : AlertController
-     ) {
+  constructor(
+    private afStorage : AngularFireStorage,
+    public navCtrl: NavController,
+    public user : UserService,
+    public navParams: NavParams,
+    private afs : AngularFirestore,
+    public afAuth : AngularFireAuth,
+    public alert : AlertController ){
       console.log(this.user.getUID())
     
       this.afs.doc(`Artists/${this.user.getUID()}`).valueChanges().subscribe( res => {
@@ -44,8 +46,15 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
-  UploadProfilePic(){
-    console.log('Profile PIc')
+
+  UploadProfilePic(event){
+    let file = event.target.files
+    let filename = this.user.getUID() + '-' + file['0'].name
+    console.log(filename)
+    let storageRef = this.afStorage.ref('ProfilePic');
+    let imageRef = storageRef.child(`${this.user.getUID()}/${filename}.jpg`);
+    return imageRef.putString(filename)
+
   }
   UpdateProfile(){
     this.afs.doc(`Artists/${this.user.getUID()}`).update(this.UpdatedUserData).then(()=>{

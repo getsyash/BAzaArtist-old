@@ -81,7 +81,7 @@ export class MyApp {
 
       this.afAuth.authState.subscribe( user => {
         if(user){
-          this.rootPage = HomePage
+          this.rootPage = CalenderPage
         }else{
           this.rootPage = LoginPage
         }

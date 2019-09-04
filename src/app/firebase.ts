@@ -3,7 +3,7 @@ const config = {
     authDomain: "baza-7a5d5.firebaseapp.com",
     databaseURL: "https://baza-7a5d5.firebaseio.com",
     projectId: "baza-7a5d5",
-    storageBucket: "",
+    storageBucket: "baza-7a5d5.appspot.com/",
     messagingSenderId: "794187579108",
     appId: "1:794187579108:web:1020d38621ff93a0"
  }

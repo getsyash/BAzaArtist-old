@@ -17,7 +17,7 @@
   <ion-row>
     <p style="line-height: 24px;"><span style="border-bottom: 1px solid #000; padding-bottom: 0.25em">My Profile</span></p>
     <ion-item>
-      <input type="file" class="filebtn" (click)="UploadProfilePic()" />
+      <input type="file" class="filebtn" (change)="UploadProfilePic($event)" />
       <img src="{{ProfilePic}}">
     </ion-item>
     <ion-item>
